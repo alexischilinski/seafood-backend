@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authenticate, only: [:show]
+    before_action :authenticate, only: [:show, :update]
     def index
         users = User.all 
         render json: users, include: :fishes
@@ -11,9 +11,22 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create(user_params)
-        render json: user, status: :created
+        @user = User.create(user_params)
+        secret = Rails.application.secrets.secret_key_base
+        token = JWT.encode({user_id: @user.id}, secret)
+        render json: {user: @user, token: token}, status: :unauthorized
     end
+
+    def update
+        user = User.find(params[:id])
+        user.update(user_params)
+        render json: user, include: :fishes
+    end
+
+    # def destroy
+    #     user = User.find(params[:id])
+    #     user.destroy
+    # end
 
     private
 
