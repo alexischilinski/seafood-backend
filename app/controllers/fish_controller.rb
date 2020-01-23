@@ -9,4 +9,9 @@ class FishController < ApplicationController
         fish = Fish.find(params[:id])
         render json: fish
     end
+
+    def destroy
+        fish = Fish.find(params[:id])
+        fish.destroy 
+    end
 end
