@@ -1,24 +1,52 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# SEAstainability
 
-Things you may want to cover:
+This is the backend for SEAstainability, an app built to show sustainable seafood choices.
 
-* Ruby version
+## Getting Started/Installing
 
-* System dependencies
+Fork and clone this repo. First use the command:
 
-* Configuration
+```
+bundle install
+```
+to create your Gemfile. Since this is built with PostgreSQL, you will also need to run:
 
-* Database creation
+```
+rails db:create
+```
+as well as:
 
-* Database initialization
+```
+rails db:migrate
+```
+and:
+```
+rails db:seed
+```
 
-* How to run the test suite
+To start the rails server, run this command:
+```
+rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, find my "seafood-frontend" repo to run the frontend file. (https://github.com/alexiscait142/seafood_frontend)
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+This app requires Ruby on Rails, Active Record, and Postgres.
+
+## Resources
+
+* [FishWatch API](https://www.fishwatch.gov/developers) - Sustainable Seafood API -- NOAA
+* [Seafood Watch](https://www.seafoodwatch.org/) - Seafood Watch -- Monterey Bay Aquarium
+* [Great Pacific Garbage Patch](https://www.nationalgeographic.org/encyclopedia/great-pacific-garbage-patch/) - Information on the Great Pacific Garbage Patch -- National Geographic
+* [The Oceans & CO2](https://usa.oceana.org/carbon-emissions-are-killing-oceans) - Information on the effects of excess CO2 on the oceans -- Oceana
+
+## Authors
+
+* **Alexis Chilinski**
+
+## Acknowledgments
+
+* Flatiron School
