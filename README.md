@@ -30,7 +30,7 @@ To start the rails server, run this command:
 rails s
 ```
 
-Next, find my "seafood-frontend" repo to run the frontend file.
+Next, find my [seafood-frontend](https://github.com/alexiscait142/seafood_frontend] repo to run the frontend file.
 
 ### Prerequisites
 
