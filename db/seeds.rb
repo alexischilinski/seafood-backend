@@ -10,8 +10,10 @@ require 'pry'
 
 require 'rest-client'
 
+User.destroy_all
 Fish.destroy_all
 Region.destroy_all
+
 
 
 def fish_list

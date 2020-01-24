@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :user_fishes
   resources :users
-  resources :regions
+  resources :regions, only: [:index]
   resources :fish
 
   post "login", to: "authentication#login"
