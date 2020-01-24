@@ -10,6 +10,7 @@ require 'pry'
 
 require 'rest-client'
 
+UserFish.destroy_all
 User.destroy_all
 Fish.destroy_all
 Region.destroy_all
