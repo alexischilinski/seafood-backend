@@ -4,7 +4,8 @@ class ApplicationController < ActionController::API
             render json: {error: "must be logged in"}, status: :unauthorized
         else
             token = request.headers[:authorization].split(" ")[1]
-            secret = Rails.application.secrets.secret_key_base
+            secret = ENV['SECRET_KEY_BASE']
+            # Rails.application.secrets.secret_key_base
             decoded_token = JWT.decode(token, secret)[0]
             @user = User.find(decoded_token["user_id"])
             if !@user 
