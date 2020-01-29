@@ -47,6 +47,12 @@ This app requires Ruby on Rails, Active Record, and Postgres.
 
 * **Alexis Chilinski**
 
+## Deployment
+
+* Deployed to http://mod3seafood.herokuapp.com/
+* /fish
+* /regions
+
 ## Acknowledgments
 
 * Flatiron School
